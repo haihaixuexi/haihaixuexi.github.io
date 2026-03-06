@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小游戏大厅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 50px;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+        
+        .game-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        
+        .game-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .game-desc {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .play-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            background: #5a6edb;
+        }
+        
+        footer {
+            color: #999;
+            text-align: center;
+            margin-top: auto;
+            padding: 20px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .game-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 小游戏大厅</h1>
+        <p class="subtitle">休闲娱乐，轻松一刻</p>
+    </header>
+
+    <div class="game-container">
+        <!-- 贪吃蛇游戏卡片 -->
+        <div class="game-card">
+            <div class="game-icon">🐍</div>
+            <h2 class="game-title">贪吃蛇</h2>
+            <p class="game-desc">经典怀旧，控制蛇吃掉食物，挑战最高分</p>
+            <a href="games/snake/index.html" class="play-btn">开始游戏</a>
+        </div>
+
+        <!-- 预留其他游戏位置（可直接复制上面的卡片修改） -->
+        <!-- <div class="game-card">
+            <div class="game-icon">🎮</div>
+            <h2 class="game-title">新游戏</h2>
+            <p class="game-desc">游戏描述</p>
+            <a href="games/新游戏文件夹/index.html" class="play-btn">开始游戏</a>
+        </div> -->
+    </div>
+
+    <footer>
+        <p>小游戏大厅 © 2026</p>
+    </footer>
+</body>
+</html>
